@@ -10,7 +10,7 @@ import m4 from "@/assets/memory-4.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Happy Birthday * A Magical Celebration" },
+      { title: "Happy Birthday Symphy — A Magical Celebration" },
       {
         name: "description",
         content: "A heartfelt birthday celebration site filled with memories, music, and magic.",
