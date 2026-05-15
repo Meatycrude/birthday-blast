@@ -10,8 +10,11 @@ import m4 from "@/assets/memory-4.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Happy Birthday — A Magical Celebration" },
-      { name: "description", content: "A heartfelt birthday celebration site filled with memories, music, and magic." },
+      { title: "Happy Birthday * A Magical Celebration" },
+      {
+        name: "description",
+        content: "A heartfelt birthday celebration site filled with memories, music, and magic.",
+      },
     ],
   }),
   component: Index,
@@ -44,7 +47,7 @@ function Index() {
           transition={{ duration: 0.8 }}
           className="mb-4 text-sm font-medium uppercase tracking-[0.4em] text-muted-foreground"
         >
-          Today we celebrate you
+          Today I celebrate you,!
         </motion.p>
 
         <motion.h1
@@ -54,7 +57,7 @@ function Index() {
           className="animate-float-slow text-shimmer text-6xl font-bold leading-tight md:text-8xl lg:text-9xl"
           style={{ fontFamily: "var(--font-script)" }}
         >
-          Happy Birthday!
+          Happy Birthday Symphy!
         </motion.h1>
 
         <motion.p
@@ -63,7 +66,8 @@ function Index() {
           transition={{ delay: 0.8, duration: 1 }}
           className="mt-8 max-w-xl text-lg text-muted-foreground md:text-xl"
         >
-          A little corner of the internet, made just for you — full of memories, music, and the love of everyone who adores you.
+          A little corner of the internet, made just for you — full of memories, music, and love
+          from Eugene.
         </motion.p>
 
         <motion.div
@@ -88,7 +92,9 @@ function Index() {
           transition={{ delay: 1.4, duration: 1 }}
           className="mt-24 w-full"
         >
-          <div className="mb-6 text-xs uppercase tracking-[0.3em] text-muted-foreground">A glimpse of the magic</div>
+          <div className="mb-6 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            A glimpse of the magic
+          </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             {galleryImgs.map((src, i) => (
               <motion.div
