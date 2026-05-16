@@ -117,7 +117,7 @@ function Index() {
 
         <div className="mt-12 inline-flex items-center gap-2 rounded-full glass px-5 py-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
           <img src={hero} alt="" className="hidden" />
-          Music is playing — tap the button to pause anytime
+          Music is playing 
         </div>
       </section>
     </main>
