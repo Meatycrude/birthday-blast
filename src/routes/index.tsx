@@ -67,7 +67,7 @@ function Index() {
           className="mt-8 max-w-xl text-lg text-muted-foreground md:text-xl"
         >
           A little corner of the internet, made just for you — full of memories, music, and love
-          from Eugene.
+          from Feli.
         </motion.p>
 
         <motion.div
