@@ -1,15 +1,19 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
-  Outlet,
   Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
   Scripts,
+  ClientOnly,
 } from "@tanstack/react-router";
+import { BrowserRouter, Routes, Route as RRDRoute } from "react-router-dom";
 
 import appCss from "../styles.css?url";
 import { MusicProvider, MusicToggle } from "@/components/MusicProvider";
+import Index from "@/pages/Index";
+import Memories from "@/pages/Memories";
+import Finale from "@/pages/Finale";
 
 function NotFoundComponent() {
   return (
@@ -115,7 +119,16 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <MusicProvider>
-        <Outlet />
+        <ClientOnly fallback={null}>
+          <BrowserRouter>
+            <Routes>
+              <RRDRoute path="/" element={<Index />} />
+              <RRDRoute path="/memories" element={<Memories />} />
+              <RRDRoute path="/finale" element={<Finale />} />
+              <RRDRoute path="*" element={<NotFoundComponent />} />
+            </Routes>
+          </BrowserRouter>
+        </ClientOnly>
         <MusicToggle />
       </MusicProvider>
     </QueryClientProvider>
